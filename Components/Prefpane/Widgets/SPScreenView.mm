@@ -53,7 +53,7 @@
 
 @end
 
-static const float kMaxScreenSize = 100.0f;
+static const CGFloat kMaxScreenSize = 100.0f;
 
 @implementation SPScreenView
 

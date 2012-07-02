@@ -333,8 +333,9 @@ static unsigned int NbrOfPointsThatAreNeighbours( std::vector<NSPoint> & newPosi
 -(NSPoint)SPScreenView:(SPScreenView*)screenView positionOfScreenAtIndex:(unsigned int)index
 {
     NSArray * screens = [self screens];
-
-    return [[screens objectAtIndex: index] position];
+	SPScreenEntry * screen = [screens objectAtIndex: index];
+    
+	return [screen position];
 }
 
 //(needed for std::find...)
