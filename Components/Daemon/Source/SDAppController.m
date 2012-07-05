@@ -44,8 +44,8 @@
 	
 	// redirect stdout and stderr
 	NSString*	logFilePath = [SDLogfilePath stringByStandardizingPath];
-	freopen([logFilePath cString], "a", stdout);
-	freopen([logFilePath cString], "a", stderr);
+	freopen([logFilePath UTF8String], "a", stdout);
+	freopen([logFilePath UTF8String], "a", stderr);
 	
 	// create config
 	config = [[SDConfigurationManager alloc] init];
@@ -66,6 +66,9 @@
 	}
 	[[NSDistributedNotificationCenter defaultCenter] removeObserver:[NSApplication sharedApplication] name:SDSynergydShouldTerminateNotification object:nil];
 
-	[[NSDistributedNotificationCenter defaultCenter] postNotificationName:SDSynergydDidTerminateNotification object:nil];
+	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: SDSynergydDidTerminateNotification
+																   object: nil
+																 userInfo: nil
+																  options: NSNotificationDeliverImmediately];
 }
 @end

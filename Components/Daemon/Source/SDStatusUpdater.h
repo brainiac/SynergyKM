@@ -32,12 +32,31 @@
 #import <Cocoa/Cocoa.h>
 #import "SDConstants.h"
 
-#define SDAddStatusUpdateObserverForObject(sel,o) [[NSNotificationCenter defaultCenter] addObserver:self selector:sel name:SDStatusUpdateNotification object:o]
-#define SDRemoveStatusUpdateObserverForObject(o) [[NSNotificationCenter defaultCenter] removeObserver:self name:SDStatusUpdateNotification object:o]
+#define SDAddStatusUpdateObserverForObject(sel,o) \
+	[[NSNotificationCenter defaultCenter] addObserver:self \
+											 selector:sel \
+												 name:SDStatusUpdateNotification \
+											   object:o]
 
-#define SDUpdateStatusCode(stat) [[SDStatusUpdater defaultStatusUpdater] postStatusUpdateCode:stat message:nil sender:self]
-#define SDUpdateStatusCodeWithMessage(stat,msg) [[SDStatusUpdater defaultStatusUpdater] postStatusUpdateCode:stat message:msg sender:self]
-#define SDForwardStatus(notification) [[NSNotificationCenter defaultCenter] postNotificationName:[notification name] object:self userInfo:[notification userInfo]]
+#define SDRemoveStatusUpdateObserverForObject(o) \
+	[[NSNotificationCenter defaultCenter] removeObserver:self \
+													name:SDStatusUpdateNotification \
+												  object:o]
+
+#define SDUpdateStatusCode(stat) \
+	[[SDStatusUpdater defaultStatusUpdater] postStatusUpdateCode:stat \
+														 message:nil \
+														  sender:self]
+
+#define SDUpdateStatusCodeWithMessage(stat,msg) \
+	[[SDStatusUpdater defaultStatusUpdater] postStatusUpdateCode:stat \
+														 message:msg \
+														  sender:self]
+
+#define SDForwardStatus(notification) \
+	[[NSNotificationCenter defaultCenter] postNotificationName:[notification name] \
+														object:self \
+													  userInfo:[notification userInfo]]
 
 @interface SDStatusUpdater : NSObject{
 	SDStatusUpdater*		nextReceiver;

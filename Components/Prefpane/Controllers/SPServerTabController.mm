@@ -124,6 +124,8 @@ static unsigned int NbrOfPointsThatAreNeighbours( std::vector<NSPoint> & newPosi
     if (selectedIndex != NSNotFound)
     {
         NSArray * screens = [self screens];
+		
+		NSLog(@"SelectedIndex: %016x", selectedIndex);
         result = [screens objectAtIndex: selectedIndex];
     }
     
@@ -140,7 +142,7 @@ static unsigned int NbrOfPointsThatAreNeighbours( std::vector<NSPoint> & newPosi
     NSString * newName = NSLocalizedStringFromTableInBundle(@"New Screen", nil, thisBundle, @"");
     NSString * baseName = newName;
 
-    unsigned int index = 1;
+    NSUInteger index = 1;
     NSEnumerator * iter = [[activeConfig screens] objectEnumerator];
     while( SPScreenEntry * entry = [iter nextObject] )
     {
@@ -174,7 +176,7 @@ static unsigned int NbrOfPointsThatAreNeighbours( std::vector<NSPoint> & newPosi
     {
         NSArray * screens = [self screens];
         
-        unsigned int screenCount = [screens count];
+        NSUInteger screenCount = [screens count];
         
         if (screenCount < 3)
             return YES;
@@ -212,7 +214,6 @@ static unsigned int NbrOfPointsThatAreNeighbours( std::vector<NSPoint> & newPosi
 -(void)selectionChanged
 {
     SPScreenEntry * selectedScreen = [self selectedScreen];
-    
     BOOL enabled = (selectedScreen != nil);
     
     [aliasesBtn setEnabled: enabled];
@@ -323,14 +324,14 @@ static unsigned int NbrOfPointsThatAreNeighbours( std::vector<NSPoint> & newPosi
     return [screens count];
 }
 
--(NSString *)SPScreenView:(SPScreenView*)screenView nameOfScreenAtIndex:(unsigned int)index
+-(NSString *)SPScreenView:(SPScreenView*)screenView nameOfScreenAtIndex:(NSUInteger)index
 {
     NSArray * screens = [self screens];
 
     return [[screens objectAtIndex: index] name];
 }
 
--(NSPoint)SPScreenView:(SPScreenView*)screenView positionOfScreenAtIndex:(unsigned int)index
+-(NSPoint)SPScreenView:(SPScreenView*)screenView positionOfScreenAtIndex:(NSUInteger)index
 {
     NSArray * screens = [self screens];
 	SPScreenEntry * screen = [screens objectAtIndex: index];
@@ -405,7 +406,7 @@ static unsigned int NbrOfPointsThatAreNeighbours( std::vector<NSPoint> & newPosi
 
 }
 
--(BOOL)SPScreenView:(SPScreenView*)screenView datasourceShouldChangePositionTo: (NSPoint)point atIndex:(unsigned int)index;
+-(BOOL)SPScreenView:(SPScreenView*)screenView datasourceShouldChangePositionTo: (NSPoint)point atIndex:(NSUInteger)index;
 {
     NSArray * screens = [self screens];
 
@@ -415,8 +416,7 @@ static unsigned int NbrOfPointsThatAreNeighbours( std::vector<NSPoint> & newPosi
     if (NSEqualPoints( [movingScreen position], point))
         return NO;
 
-    
-    unsigned int screenCount = [screens count];
+    NSUInteger screenCount = [screens count];
     
     //No point in moving a screen if it is alone.
     if (screenCount < 2)
@@ -458,7 +458,7 @@ static unsigned int NbrOfPointsThatAreNeighbours( std::vector<NSPoint> & newPosi
     return result;
 }
 
--(void)SPScreenView:(SPScreenView*)screenView positionChanged: (NSPoint)newPosition atIndex:(unsigned int)index
+-(void)SPScreenView:(SPScreenView*)screenView positionChanged: (NSPoint)newPosition atIndex:(NSUInteger)index
 {
     NSArray * screens = [self screens];
     SPScreenEntry * movingScreen = [screens objectAtIndex: index];
@@ -502,8 +502,8 @@ static unsigned int NbrOfPointsThatAreNeighbours( std::vector<NSPoint> & newPosi
     [[synergyPane configManager] setDirty: YES];
 }
 
--(void)SPScreenView:(SPScreenView*)screenView selectionIndexChangedTo:(unsigned int)index
-{
+-(void)SPScreenView:(SPScreenView*)screenView selectionIndexChangedTo:(NSUInteger)index
+{	
     selectedIndex = index;
     [self selectionChanged];
 }

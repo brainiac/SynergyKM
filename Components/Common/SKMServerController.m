@@ -152,7 +152,10 @@ SKMServerController	*sharedInstance = nil;
 - (void) stop
 {
 	[self setLaunchAtLogin:NO];
-	[[NSDistributedNotificationCenter defaultCenter] postNotificationName:SDSynergydShouldTerminateNotification object:nil];
+	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: SDSynergydShouldTerminateNotification
+																   object: nil
+																 userInfo: nil
+																  options: NSNotificationDeliverImmediately ];
 }
 
 - (void) toggle
@@ -215,7 +218,9 @@ SKMServerController	*sharedInstance = nil;
 	
 	while(GetNextProcess(&PSN) == noErr) {
 		NSDictionary * infoDict = (NSDictionary *)ProcessInformationCopyDictionary(&PSN, kProcessDictionaryIncludeAllInformationMask);
-		if ([[infoDict objectForKey: @"CFBundleIdentifier"] isEqualToString: SDBundleIdentifier]) {
+		NSString* bundleIdentifier = [infoDict objectForKey: @"CFBundleIdentifier"];
+		
+		if ([bundleIdentifier isEqualToString: SDBundleIdentifier]) {
 			isRunning = YES;
 			[infoDict release];
 			break;
@@ -233,14 +238,18 @@ SKMServerController	*sharedInstance = nil;
 
 - (void) requestStatusUpdate
 {
-	[[NSDistributedNotificationCenter defaultCenter]
-		postNotificationName:SDSynergydShouldPostStatusUpdateNotification object:nil];
+	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: SDSynergydShouldPostStatusUpdateNotification
+																   object: nil
+																 userInfo: nil
+																  options: NSNotificationDeliverImmediately];
 }
 
 - (void) requestConfigurationReload
 {
-	[[NSDistributedNotificationCenter defaultCenter]
-		postNotificationName:SDSynergydShouldReloadConfigurationNotification object:nil];
+	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: SDSynergydShouldReloadConfigurationNotification
+																   object: nil
+																 userInfo: nil
+																  options: NSNotificationDeliverImmediately];
 }
 
 #pragma mark -

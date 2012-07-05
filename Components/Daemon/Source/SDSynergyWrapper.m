@@ -95,6 +95,9 @@ NSString* const SDSynergydInvalidConfigurationException = @"SDSynergydInvalidCon
 - (id) init {
 	if(self = [super init]) {
 		status = SDStatusIdle;
+		screenName = nil;
+		address = nil;
+		debugLevel = nil;
 	}
 	return self;
 }

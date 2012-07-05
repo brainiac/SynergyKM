@@ -35,6 +35,7 @@
 #import "SPConfigEntry.h"
 
 #import <SystemConfiguration/SystemConfiguration.h>
+#import <SystemConfiguration/SCDynamicStoreCopySpecific.h>
 
 @interface SPClientTabController (Private)
 

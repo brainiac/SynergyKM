@@ -39,17 +39,17 @@
 
 -(unsigned int)datasourceNumberOfScreen;
 
--(NSString *)datasourceNameOfScreenAtIndex:(unsigned int)index;
+-(NSString *)datasourceNameOfScreenAtIndex:(NSUInteger)index;
 
--(NSPoint)datasourcePositionOfScreenAtIndex:(unsigned int)index;
+-(NSPoint)datasourcePositionOfScreenAtIndex:(NSUInteger)index;
 
 -(void)recalcLayout;
 
--(void)datasourceSelectionIndexChangedTo:(unsigned int)index;
+-(void)datasourceSelectionIndexChangedTo:(NSUInteger)index;
 
--(void)datasourcePositionChanged:(NSPoint)point atIndex:(unsigned int)index;
+-(void)datasourcePositionChanged:(NSPoint)point atIndex:(NSUInteger)index;
 
--(BOOL)datasourceShouldChangePositionTo:(NSPoint)point atIndex:(unsigned int)index;
+-(BOOL)datasourceShouldChangePositionTo:(NSPoint)point atIndex:(NSUInteger)index;
 
 @end
 
@@ -108,11 +108,11 @@ static const CGFloat kMaxScreenSize = 100.0f;
     return result;
 }
 
--(unsigned int)screenAtPoint:(NSPoint) point
+-(NSUInteger)screenAtPoint:(NSPoint) point
 {
-    unsigned int count = [screens count];
+	NSUInteger count = [screens count];
     
-    for (unsigned int i = 0; i < count; ++i)
+    for (NSUInteger i = 0; i < count; ++i)
     {
         NSDictionary * screen = [screens objectAtIndex: i];
         
@@ -127,12 +127,12 @@ static const CGFloat kMaxScreenSize = 100.0f;
     return NSNotFound;
 }
 
--(unsigned int)selectionIndex
+-(NSUInteger)selectionIndex
 {
     return selectionIndex;
 }
 
--(void)setSelectionIndex:(unsigned int)index
+-(void)setSelectionIndex:(NSUInteger)index
 {
     selectionIndex = index;
     
@@ -241,7 +241,7 @@ static const CGFloat kMaxScreenSize = 100.0f;
     if (screenImage == nil)
     {
         NSBundle * thisBundle = [NSBundle bundleForClass: [self class]];
-        NSString * imagePath = [thisBundle pathForResource: @"screen" ofType: @"tiff"];
+        NSString * imagePath = [thisBundle pathForResource: @"SynergyScreen" ofType: @"png"];
         screenImage = [[NSImage alloc] initWithContentsOfFile: imagePath];
     }
     
@@ -425,7 +425,7 @@ static const CGFloat kMaxScreenSize = 100.0f;
 {
     NSPoint lastPoint = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     NSPoint originalPoint = lastPoint;
-    unsigned int selection = [self screenAtPoint: originalPoint];
+    NSUInteger selection = [self screenAtPoint: originalPoint];
 
     [self setSelectionIndex: selection];
     [self setNeedsDisplay: YES];
@@ -495,7 +495,7 @@ static const CGFloat kMaxScreenSize = 100.0f;
     return 0;
 }
 
--(NSString *)datasourceNameOfScreenAtIndex:(unsigned int)index
+-(NSString *)datasourceNameOfScreenAtIndex:(NSUInteger)index
 {
     if ([datasource respondsToSelector: @selector(SPScreenView:nameOfScreenAtIndex:)] == YES)
     {
@@ -505,7 +505,7 @@ static const CGFloat kMaxScreenSize = 100.0f;
     return @"";
 }
 
--(NSPoint)datasourcePositionOfScreenAtIndex:(unsigned int)index
+-(NSPoint)datasourcePositionOfScreenAtIndex:(NSUInteger)index
 {
     if ([datasource respondsToSelector: @selector(SPScreenView:positionOfScreenAtIndex:)] == YES)
     {
@@ -515,7 +515,7 @@ static const CGFloat kMaxScreenSize = 100.0f;
     return NSZeroPoint;
 }
 
--(void)datasourceSelectionIndexChangedTo:(unsigned int)index
+-(void)datasourceSelectionIndexChangedTo:(NSUInteger)index
 {
     if ([datasource respondsToSelector: @selector(SPScreenView:selectionIndexChangedTo:)] == YES)
     {
@@ -523,7 +523,7 @@ static const CGFloat kMaxScreenSize = 100.0f;
     }
 }
 
--(BOOL)datasourceShouldChangePositionTo:(NSPoint)point atIndex:(unsigned int)index
+-(BOOL)datasourceShouldChangePositionTo:(NSPoint)point atIndex:(NSUInteger)index
 {
     if ([datasource respondsToSelector: @selector(SPScreenView:datasourceShouldChangePositionTo:atIndex:)] == YES)
     {
@@ -533,7 +533,7 @@ static const CGFloat kMaxScreenSize = 100.0f;
     return NO;
 }
 
--(void)datasourcePositionChanged:(NSPoint)point atIndex:(unsigned int)index
+-(void)datasourcePositionChanged:(NSPoint)point atIndex:(NSUInteger)index
 {
     if ([datasource respondsToSelector: @selector(SPScreenView:positionChanged:atIndex:)] == YES)
     {

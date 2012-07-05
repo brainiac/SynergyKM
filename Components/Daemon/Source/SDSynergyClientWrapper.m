@@ -32,6 +32,8 @@
 #import "SDSynergyClientWrapper.h"
 #import "LCSStdIOTaskWrapper.h"
 
+#import <SystemConfiguration/SCDynamicStoreCopySpecific.h>
+
 NSDictionary*	SDClientStatusMessageDict;
 
 @implementation SDSynergyClientWrapper
@@ -44,7 +46,7 @@ NSDictionary*	SDClientStatusMessageDict;
 														   forClass:[self class]];
 		done = YES;
     }
-}
+}	
 
 - (void) dealloc
 {
@@ -78,7 +80,7 @@ NSDictionary*	SDClientStatusMessageDict;
 	debugLevel = [[config objectForKey:SDConfDebugLevelKey] retain];
 	screenName = [config objectForKey:SDConfScreenNameKey];
 	if (!screenName) {
-		screenName = (NSString*) SCDynamicStoreCopyLocalHostName(NULL);
+		screenName = (NSString*)SCDynamicStoreCopyLocalHostName(nil);
 	}
 	else {
 		[screenName retain];
@@ -142,7 +144,7 @@ NSDictionary*	SDClientStatusMessageDict;
 	BOOL		needsStatusUpdate = NO;
 	
 	// log to stdout
-	NSLog(line);
+	NSLog(@"%@", line);
 	
 	NSScanner*	scanner = [NSScanner scannerWithString:line];
 	[scanner setCharactersToBeSkipped:[NSCharacterSet characterSetWithCharactersInString:@""]];

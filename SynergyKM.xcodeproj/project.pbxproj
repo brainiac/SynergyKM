@@ -117,12 +117,10 @@
 		CA6C7424083B9C5A0006D65C /* SPScreenEntryBaseSheetController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA6C7328083B969B0006D65C /* SPScreenEntryBaseSheetController.mm */; };
 		CA6C7425083B9C5B0006D65C /* SPConfigurationManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA6C7319083B969B0006D65C /* SPConfigurationManager.mm */; };
 		CA6C7426083B9C5B0006D65C /* SPScreenOptionsController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA6C732A083B969C0006D65C /* SPScreenOptionsController.mm */; };
-		CA6C7427083B9C5C0006D65C /* SynergyPref.tiff in Resources */ = {isa = PBXBuildFile; fileRef = CA6C7336083B969C0006D65C /* SynergyPref.tiff */; };
 		CA6C7428083B9C5C0006D65C /* SPStringAdditions.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA6C733D083B969C0006D65C /* SPStringAdditions.mm */; };
 		CA6C742B083B9C5E0006D65C /* SPScreenView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA6C7340083B969C0006D65C /* SPScreenView.mm */; };
 		CA6C742C083B9C5E0006D65C /* SPNewLocationController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA6C7326083B969B0006D65C /* SPNewLocationController.mm */; };
 		CA6C742D083B9C5F0006D65C /* SPClientTabController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA6C7322083B969B0006D65C /* SPClientTabController.mm */; };
-		CA6C742E083B9C5F0006D65C /* screen.tiff in Resources */ = {isa = PBXBuildFile; fileRef = CA6C7335083B969C0006D65C /* screen.tiff */; };
 		CA6C742F083B9C600006D65C /* SPServerOptionsController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA6C732C083B969C0006D65C /* SPServerOptionsController.mm */; };
 		CA6C7430083B9C620006D65C /* SynergyPane.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA6C7338083B969C0006D65C /* SynergyPane.mm */; };
 		CA6C7431083B9C6E0006D65C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA6C7416083B9C1D0006D65C /* InfoPlist.strings */; };
@@ -140,6 +138,9 @@
 		CA97F109083F872C00F8650A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA97F107083F872B00F8650A /* InfoPlist.strings */; };
 		CAA598730840DC1F0076CB83 /* Synergy.icns in Resources */ = {isa = PBXBuildFile; fileRef = CAA598720840DC1F0076CB83 /* Synergy.icns */; };
 		F77E721315A1654A0031D84B /* MenuCracker.menu in Resources */ = {isa = PBXBuildFile; fileRef = F77E720815A162F70031D84B /* MenuCracker.menu */; };
+		F7F3D95615A56C8800BD06C2 /* SynergyPref.png in Resources */ = {isa = PBXBuildFile; fileRef = F7F3D95415A56C8800BD06C2 /* SynergyPref.png */; };
+		F7F3D95715A56C8800BD06C2 /* SynergyScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F7F3D95515A56C8800BD06C2 /* SynergyScreen.png */; };
+		F7F3D99315A56E3C00BD06C2 /* Synergy.icns in Resources */ = {isa = PBXBuildFile; fileRef = CAA598720840DC1F0076CB83 /* Synergy.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -206,6 +207,13 @@
 			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
 			remoteInfo = MenuCracker;
 		};
+		F7F3D7AF15A549B300BD06C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F77E71FF15A162F70031D84B /* MenuCracker.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
+			remoteInfo = MenuCracker;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -231,7 +239,7 @@
 		CA5B50A4083E0D490071F3C7 /* SKMServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKMServerController.m; sourceTree = "<group>"; };
 		CA5B5389083EA72B0071F3C7 /* SKMMenuExtraController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SKMMenuExtraController.h; sourceTree = "<group>"; };
 		CA5B538A083EA72B0071F3C7 /* SKMMenuExtraController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SKMMenuExtraController.m; sourceTree = "<group>"; };
-		CA5B53AE083EA7E40071F3C7 /* MenuCracker.menu */ = {isa = PBXFileReference; explicitFileType = wrapper; name = MenuCracker.menu; path = ../menucracker/build/Release/MenuCracker.menu; sourceTree = "<group>"; };
+		CA5B53AE083EA7E40071F3C7 /* MenuCracker.menu */ = {isa = PBXFileReference; explicitFileType = wrapper; name = MenuCracker.menu; path = ../../Components/menucracker/build/Release/MenuCracker.menu; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6C72FD083B969B0006D65C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA6C72FF083B969B0006D65C /* SDAppController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SDAppController.h; sourceTree = "<group>"; };
 		CA6C7300083B969B0006D65C /* SDAppController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SDAppController.m; sourceTree = "<group>"; };
@@ -281,8 +289,6 @@
 		CA6C7331083B969C0006D65C /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA6C7333083B969C0006D65C /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/SynergyPane.nib; sourceTree = "<group>"; };
 		CA6C7334083B969C0006D65C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA6C7335083B969C0006D65C /* screen.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = screen.tiff; sourceTree = "<group>"; };
-		CA6C7336083B969C0006D65C /* SynergyPref.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = SynergyPref.tiff; sourceTree = "<group>"; };
 		CA6C7337083B969C0006D65C /* SynergyPane.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SynergyPane.h; sourceTree = "<group>"; };
 		CA6C7338083B969C0006D65C /* SynergyPane.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = SynergyPane.mm; sourceTree = "<group>"; };
 		CA6C733A083B969C0006D65C /* SPBezierPath+RoundRect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "SPBezierPath+RoundRect.h"; sourceTree = "<group>"; };
@@ -338,6 +344,8 @@
 		CAA598420840D8DF0076CB83 /* Synergy.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Synergy.psd; sourceTree = "<group>"; };
 		CAA598720840DC1F0076CB83 /* Synergy.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Synergy.icns; sourceTree = "<group>"; };
 		F77E71FF15A162F70031D84B /* MenuCracker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MenuCracker.xcodeproj; path = Components/menucracker/MenuCracker.xcodeproj; sourceTree = "<group>"; };
+		F7F3D95415A56C8800BD06C2 /* SynergyPref.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SynergyPref.png; sourceTree = "<group>"; };
+		F7F3D95515A56C8800BD06C2 /* SynergyScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SynergyScreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -536,11 +544,11 @@
 		CA6C732F083B969C0006D65C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CA6C7334083B969C0006D65C /* Info.plist */,
 				CA6C7416083B9C1D0006D65C /* InfoPlist.strings */,
 				CA6C741A083B9C230006D65C /* SynergyPane.nib */,
-				CA6C7334083B969C0006D65C /* Info.plist */,
-				CA6C7335083B969C0006D65C /* screen.tiff */,
-				CA6C7336083B969C0006D65C /* SynergyPref.tiff */,
+				F7F3D95415A56C8800BD06C2 /* SynergyPref.png */,
+				F7F3D95515A56C8800BD06C2 /* SynergyScreen.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -768,6 +776,7 @@
 			dependencies = (
 				CA6C7463083B9DAD0006D65C /* PBXTargetDependency */,
 				CA5B52FC083E9FC90071F3C7 /* PBXTargetDependency */,
+				F7F3D7B015A549B300BD06C2 /* PBXTargetDependency */,
 			);
 			name = Prefpane;
 			productName = Prefpane;
@@ -880,11 +889,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7F3D99315A56E3C00BD06C2 /* Synergy.icns in Resources */,
+				F7F3D95615A56C8800BD06C2 /* SynergyPref.png in Resources */,
+				F7F3D95715A56C8800BD06C2 /* SynergyScreen.png in Resources */,
 				F77E721315A1654A0031D84B /* MenuCracker.menu in Resources */,
 				CA6C7431083B9C6E0006D65C /* InfoPlist.strings in Resources */,
 				CA6C7432083B9C6E0006D65C /* SynergyPane.nib in Resources */,
-				CA6C7427083B9C5C0006D65C /* SynergyPref.tiff in Resources */,
-				CA6C742E083B9C5F0006D65C /* screen.tiff in Resources */,
 				CA6C7466083B9DB90006D65C /* Synergyd.app in Resources */,
 				CA5B5301083E9FD70071F3C7 /* SynergyKM.menu in Resources */,
 			);
@@ -1027,6 +1037,11 @@
 			isa = PBXTargetDependency;
 			target = CA6C7371083B96D50006D65C /* Daemon */;
 			targetProxy = CA6C7462083B9DAD0006D65C /* PBXContainerItemProxy */;
+		};
+		F7F3D7B015A549B300BD06C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MenuCracker;
+			targetProxy = F7F3D7AF15A549B300BD06C2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1214,6 +1229,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Components/Common/SynergyKM_Prefix.pch;
 				INFOPLIST_FILE = Components/Prefpane/Resources/Info.plist;
@@ -1227,6 +1243,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Components/Common/SynergyKM_Prefix.pch;
 				INFOPLIST_FILE = Components/Prefpane/Resources/Info.plist;

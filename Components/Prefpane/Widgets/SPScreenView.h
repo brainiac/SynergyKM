@@ -53,17 +53,17 @@
     ///top right point of the screen coordinate space
     NSPoint topRightPoint;
     
-    unsigned int selectionIndex;
+    NSUInteger selectionIndex;
 
-    unsigned int draggedIndex;
+    NSUInteger draggedIndex;
             
     NSPoint dragPoint;
 }
 
 -(void)reload;
 
--(unsigned int)selectionIndex;
--(void)setSelectionIndex:(unsigned int)index;
+-(NSUInteger)selectionIndex;
+-(void)setSelectionIndex:(NSUInteger)index;
 
 @end
 
@@ -72,14 +72,14 @@
 
 -(unsigned int)SPScreenViewNumberOfScreens:(SPScreenView*)screenView;
 
--(NSString *)SPScreenView:(SPScreenView*)screenView nameOfScreenAtIndex:(unsigned int)index;
+-(NSString *)SPScreenView:(SPScreenView*)screenView nameOfScreenAtIndex:(NSUInteger)index;
 
--(NSPoint)SPScreenView:(SPScreenView*)screenView positionOfScreenAtIndex:(unsigned int)index;
+-(NSPoint)SPScreenView:(SPScreenView*)screenView positionOfScreenAtIndex:(NSUInteger)index;
 
--(void)SPScreenView:(SPScreenView*)screenView selectionIndexChangedTo:(unsigned int)index;
+-(void)SPScreenView:(SPScreenView*)screenView selectionIndexChangedTo:(NSUInteger)index;
 
--(BOOL)SPScreenView:(SPScreenView*)screenView datasourceShouldChangePositionTo: (NSPoint)point atIndex:(unsigned int)index;
+-(BOOL)SPScreenView:(SPScreenView*)screenView datasourceShouldChangePositionTo: (NSPoint)point atIndex:(NSUInteger)index;
 
--(void)SPScreenView:(SPScreenView*)screenView positionChanged: (NSPoint)point atIndex:(unsigned int)index;
+-(void)SPScreenView:(SPScreenView*)screenView positionChanged: (NSPoint)point atIndex:(NSUInteger)index;
 
 @end

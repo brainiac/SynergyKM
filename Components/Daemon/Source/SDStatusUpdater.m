@@ -167,7 +167,9 @@ SDStatusUpdater*	defaultStatusUpdater;
 		[info addEntriesFromDictionary:i];
 	}
 	
-	[[NSNotificationCenter defaultCenter] postNotificationName:SDStatusUpdateNotification object:sender userInfo:info];
+	[[NSNotificationCenter defaultCenter] postNotificationName: SDStatusUpdateNotification
+														object: sender
+													  userInfo: info];
 	//[self postLastStatusUpdate];
 }
 @end

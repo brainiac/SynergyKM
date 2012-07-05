@@ -690,7 +690,8 @@ NSString * const IsDirtyChanged = @"IsDitryChanged";
     [[NSDistributedNotificationCenter defaultCenter] 
         postNotificationName: SDSynergydShouldReloadConfigurationNotification 
                       object: nil 
-                    userInfo: nil];
+                    userInfo: nil
+					 options: NSNotificationDeliverImmediately];
 
     [self setDirty: NO];
 }

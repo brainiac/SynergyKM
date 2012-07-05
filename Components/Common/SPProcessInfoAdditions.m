@@ -30,6 +30,8 @@
 
 #import "SPProcessInfoAdditions.h"
 
+#include <CoreServices/CoreServices.h>
+
 
 @implementation NSProcessInfo ( SPProcessInfoAdditions )
 
@@ -39,7 +41,7 @@
 
     if (operatingSystemVersion == SPVersionNotChecked)
     {
-        long response = 0L;
+        SInt32 response = 0L;
         
         if (Gestalt( gestaltSystemVersion, &response) != noErr)
         {

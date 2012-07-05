@@ -30,6 +30,7 @@
 //USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #import <SystemConfiguration/SystemConfiguration.h>
+#import <SystemConfiguration/SCDynamicStoreCopySpecific.h>
 
 #import "SDAutomaticConfigurationAgent.h"
 #import "SDSynergyWrapper.h"
@@ -77,7 +78,10 @@
 			serverName = (NSString*) SCDynamicStoreCopyLocalHostName(NULL);
 		}
 		
-		if(server = [[NSNetService alloc] initWithDomain:@"" type:SDSynergyDiscoverService name:serverName port:kSynergyDefaultPort])
+		if (server = [[NSNetService alloc] initWithDomain: @""
+													 type: SDSynergyDiscoverService
+													 name: serverName
+													 port: kSynergyDefaultPort])
 		{
 			[server setDelegate:self];
 			[server publish];

@@ -67,7 +67,7 @@
 
     NSView * superview;
 
-    unsigned int selectedIndex;
+	NSInteger selectedIndex;
     
     NSPoint * cachedPositions;
 }

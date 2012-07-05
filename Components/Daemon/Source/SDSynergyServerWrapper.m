@@ -33,6 +33,8 @@
 #import "LCSStdIOTaskWrapper.h"
 #import "SDStatusUpdater.h"
 
+#import <SystemConfiguration/SCDynamicStoreCopySpecific.h>
+
 NSDictionary*	SDServerStatusMessageDict;
 
 @interface SDSynergyServerWrapper (private)
@@ -205,7 +207,7 @@ NSDictionary*	SDServerStatusMessageDict;
 	BOOL		needsStatusUpdate = NO;
 	
 	// log to stdout
-	NSLog(line);
+	NSLog(@"%@", line);
 	
 	NSScanner*	scanner = [NSScanner scannerWithString:line];
 	[scanner setCharactersToBeSkipped:[NSCharacterSet characterSetWithCharactersInString:@""]];
