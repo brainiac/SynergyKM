@@ -5,8 +5,10 @@ build/
 CVS
 .cvsignore
 CMakeFiles
+CMakeScripts
 CMakeCache.txt
 Makefile
 configure
 cmake_install.cmake
 Components/synergy-1.4.8/lib
+synergy.xcodeproj
