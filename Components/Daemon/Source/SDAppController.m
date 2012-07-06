@@ -55,7 +55,11 @@
 	}
 		
 	// install SDSynergydShouldTerminateNotification notification handler
-	[[NSDistributedNotificationCenter defaultCenter] addObserver:[NSApplication sharedApplication] selector:@selector(terminate:) name:SDSynergydShouldTerminateNotification object:nil];
+	[[NSDistributedNotificationCenter defaultCenter] addObserver:[NSApplication sharedApplication]
+														selector:@selector(terminate:)
+															name:SDSynergydShouldTerminateNotification
+														  object:nil
+											  suspensionBehavior:NSNotificationSuspensionBehaviorDeliverImmediately];
 	
 }
 

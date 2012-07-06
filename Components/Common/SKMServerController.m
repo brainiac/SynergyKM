@@ -76,12 +76,14 @@ SKMServerController	*sharedInstance = nil;
 	[[NSDistributedNotificationCenter defaultCenter] addObserver:self
 														selector:@selector(updateStatus:)
 															name:SDStatusUpdateNotification
-														  object:nil];
+														  object:nil
+											  suspensionBehavior:NSNotificationSuspensionBehaviorDeliverImmediately];
 	// reload configuration observer
 	[[NSDistributedNotificationCenter defaultCenter] addObserver:self
 														selector:@selector(reloadConfiguration:)
 															name:SDSynergydShouldReloadConfigurationNotification
-														  object:nil];
+														  object:nil
+											  suspensionBehavior:NSNotificationSuspensionBehaviorDeliverImmediately];
 	
 	// application termination notification observer
 	[[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
@@ -155,7 +157,7 @@ SKMServerController	*sharedInstance = nil;
 	[[NSDistributedNotificationCenter defaultCenter] postNotificationName: SDSynergydShouldTerminateNotification
 																   object: nil
 																 userInfo: nil
-																  options: NSNotificationDeliverImmediately ];
+																  options: NSNotificationDeliverImmediately];
 }
 
 - (void) toggle

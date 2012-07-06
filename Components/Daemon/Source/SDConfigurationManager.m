@@ -104,8 +104,16 @@ NSString* const SDConfigurationException = @"SDConfigurationException";
 		SDUpdateStatusCode(SDStatusIdle);
 		
 		// setup synergy notification listeners
-		[[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(synergydShouldReloadConfiguration:) name:SDSynergydShouldReloadConfigurationNotification object:nil];
-		[[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(synergydShouldPostStatusUpdate:) name:SDSynergydShouldPostStatusUpdateNotification object:nil];
+		[[NSDistributedNotificationCenter defaultCenter] addObserver:self
+															selector:@selector(synergydShouldReloadConfiguration:)
+																name:SDSynergydShouldReloadConfigurationNotification
+															  object:nil
+												  suspensionBehavior:NSNotificationSuspensionBehaviorDeliverImmediately];
+		[[NSDistributedNotificationCenter defaultCenter] addObserver:self
+															selector:@selector(synergydShouldPostStatusUpdate:)
+																name:SDSynergydShouldPostStatusUpdateNotification
+															  object:nil
+												  suspensionBehavior:NSNotificationSuspensionBehaviorDeliverImmediately];
 		
 		// read configuration
 		[self reloadConfiguration];
@@ -157,7 +165,10 @@ NSString* const SDConfigurationException = @"SDConfigurationException";
 - (void) synergydShouldPostStatusUpdate:(NSNotification *)notification
 {
 	if(lastStatusUpdate)
-		[[NSDistributedNotificationCenter defaultCenter] postNotification:lastStatusUpdate];
+		[[NSDistributedNotificationCenter defaultCenter] postNotificationName:[lastStatusUpdate name]
+																	   object:[lastStatusUpdate object]
+																	 userInfo:[lastStatusUpdate userInfo]
+																	  options:NSNotificationDeliverImmediately];
 }
 
 - (void)statusUpdate:(NSNotification*)notification {
@@ -166,7 +177,10 @@ NSString* const SDConfigurationException = @"SDConfigurationException";
 													  object:kSynergyDaemonAppName
 													userInfo:[[notification userInfo] copy]] retain];
 
-	[[NSDistributedNotificationCenter defaultCenter] postNotification:lastStatusUpdate];
+	[[NSDistributedNotificationCenter defaultCenter] postNotificationName:[lastStatusUpdate name]
+																   object:[lastStatusUpdate object]
+																 userInfo:[lastStatusUpdate userInfo]
+																  options:NSNotificationDeliverImmediately];
 }
 
 /*
