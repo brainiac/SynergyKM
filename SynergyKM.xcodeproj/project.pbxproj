@@ -137,6 +137,7 @@
 		CA6D7002087B09950086E3BB /* synergys in Resources */ = {isa = PBXBuildFile; fileRef = CA6D7000087B09950086E3BB /* synergys */; };
 		CA97F109083F872C00F8650A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA97F107083F872B00F8650A /* InfoPlist.strings */; };
 		CAA598730840DC1F0076CB83 /* Synergy.icns in Resources */ = {isa = PBXBuildFile; fileRef = CAA598720840DC1F0076CB83 /* Synergy.icns */; };
+		F721F9B315A97173001CFBF7 /* SynergyBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F721F9B215A97173001CFBF7 /* SynergyBackground.png */; };
 		F77E721315A1654A0031D84B /* MenuCracker.menu in Resources */ = {isa = PBXBuildFile; fileRef = F77E720815A162F70031D84B /* MenuCracker.menu */; };
 		F7F3D95615A56C8800BD06C2 /* SynergyPref.png in Resources */ = {isa = PBXBuildFile; fileRef = F7F3D95415A56C8800BD06C2 /* SynergyPref.png */; };
 		F7F3D95715A56C8800BD06C2 /* SynergyScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F7F3D95515A56C8800BD06C2 /* SynergyScreen.png */; };
@@ -343,6 +344,7 @@
 		CA97F108083F872B00F8650A /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CAA598420840D8DF0076CB83 /* Synergy.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Synergy.psd; sourceTree = "<group>"; };
 		CAA598720840DC1F0076CB83 /* Synergy.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Synergy.icns; sourceTree = "<group>"; };
+		F721F9B215A97173001CFBF7 /* SynergyBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SynergyBackground.png; path = Components/Common/SynergyBackground.png; sourceTree = SOURCE_ROOT; };
 		F77E71FF15A162F70031D84B /* MenuCracker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MenuCracker.xcodeproj; path = Components/menucracker/MenuCracker.xcodeproj; sourceTree = "<group>"; };
 		F7F3D95415A56C8800BD06C2 /* SynergyPref.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SynergyPref.png; sourceTree = "<group>"; };
 		F7F3D95515A56C8800BD06C2 /* SynergyScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SynergyScreen.png; sourceTree = "<group>"; };
@@ -546,6 +548,7 @@
 			children = (
 				CA6C7334083B969C0006D65C /* Info.plist */,
 				CA6C7416083B9C1D0006D65C /* InfoPlist.strings */,
+				F721F9B215A97173001CFBF7 /* SynergyBackground.png */,
 				CA6C741A083B9C230006D65C /* SynergyPane.nib */,
 				F7F3D95415A56C8800BD06C2 /* SynergyPref.png */,
 				F7F3D95515A56C8800BD06C2 /* SynergyScreen.png */,
@@ -897,6 +900,7 @@
 				CA6C7432083B9C6E0006D65C /* SynergyPane.nib in Resources */,
 				CA6C7466083B9DB90006D65C /* Synergyd.app in Resources */,
 				CA5B5301083E9FD70071F3C7 /* SynergyKM.menu in Resources */,
+				F721F9B315A97173001CFBF7 /* SynergyBackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

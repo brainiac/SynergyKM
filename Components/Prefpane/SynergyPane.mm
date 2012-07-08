@@ -102,7 +102,7 @@
                    name: SDStatusUpdateNotification
                  object: nil];
 	 */
-    
+	
     SPOperatingSystemVersion version = [NSProcessInfo operatingSystemVersion];
     
     if ( version < SPTigerVersion)
@@ -387,7 +387,7 @@
     [task setArguments: [NSArray arrayWithObjects:@"--version", nil]];
 
     NSPipe *pipe=[[[NSPipe alloc] init] autorelease];
-    [task setStandardError:pipe];
+    [task setStandardOutput:pipe];
 
     NSFileHandle *handle;
     handle=[pipe fileHandleForReading];
