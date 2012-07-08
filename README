@@ -1,0 +1,20 @@
+
+This is a fork of the SynergyKM project, available at: http://sourceforge.net/projects/synergykm
+
+There were compatibility issues on OSX 10.7, the original author seems to have vanished, and the source for the latest release (1.0-beta7) was unavailable, so this is based off of the 1.0-beta6 release.
+
+I pulled in some high resolution icons and art from the 1.0-beta7 package.
+
+Some things might still be broken, I'll get around to fixing them when I can (and I'll gladly accept pull requests!)
+
+
+Build notes:
+
+* the source comes with an untouched copy of synergy-1.4.8. The source is symlinked into Components/synergy.
+* synergy should be built first before building SynergyKM:
+
+    cd Components/synergy
+    cmake .
+    make
+
+Then you can build SynergyKM using your flavor of Xcode
