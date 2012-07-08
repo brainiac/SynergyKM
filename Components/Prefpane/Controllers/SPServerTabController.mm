@@ -124,8 +124,6 @@ static unsigned int NbrOfPointsThatAreNeighbours( std::vector<NSPoint> & newPosi
     if (selectedIndex != NSNotFound)
     {
         NSArray * screens = [self screens];
-		
-		NSLog(@"SelectedIndex: %016x", selectedIndex);
         result = [screens objectAtIndex: selectedIndex];
     }
     

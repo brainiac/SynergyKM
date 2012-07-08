@@ -714,8 +714,10 @@ static NSString * MenuTagToStringLevel(int tag)
     else
         [launchBtn setTitle: NSLocalizedStringFromTableInBundle(@"Turn Synergy On",nil, thisBundle,@"")];
 
+	NSString* statusString = [userInfo objectForKey: SDStatusUpdateStatusMessageKey];
+	
 	// status message
-	[synergyStatus setStringValue:[userInfo objectForKey:SDStatusUpdateStatusMessageKey]];
+	[synergyStatus setStringValue: statusString];
 }
 
 /*

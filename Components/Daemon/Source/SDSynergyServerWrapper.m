@@ -202,7 +202,7 @@ NSDictionary*	SDServerStatusMessageDict;
 @end
 
 @implementation SDSynergyServerWrapper (LCSStdIOTaskWrapperDelegate)
-- (void) task:(id)sender didReceiveErrorLine:(NSString*)line
+- (void) task:(id)sender didReceiveOutputLine:(NSString*)line
 {
 	BOOL		needsStatusUpdate = NO;
 	
@@ -216,11 +216,7 @@ NSDictionary*	SDServerStatusMessageDict;
 	NSString* logLevel;
 	[scanner scanUpToString:@": " intoString:&logLevel];
 	[scanner scanString:@": " intoString:NULL];
-#ifndef NDEBUG
-	// (don't) scan filepath
-	[scanner scanUpToString:@": " intoString:NULL];
-	[scanner scanString:@": " intoString:NULL];
-#endif
+	
 	// scan message
 	NSString* logMessage = [[scanner string] substringFromIndex:[scanner scanLocation]];
 	

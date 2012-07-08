@@ -331,7 +331,7 @@
 		CA6C739F083B985E0006D65C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		CA6C73A3083B986D0006D65C /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
 		CA6C73A6083B98830006D65C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
-		CA6C73EE083B9AE60006D65C /* SynergyKM.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SynergyKM.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA6C73EE083B9AE60006D65C /* SynergyKM.prefpane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SynergyKM.prefpane; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6C7445083B9CE10006D65C /* LCSStdIOTaskWrapper.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = LCSStdIOTaskWrapper.h; sourceTree = "<group>"; };
 		CA6C7446083B9CE10006D65C /* LCSStdIOTaskWrapper.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = LCSStdIOTaskWrapper.m; sourceTree = "<group>"; };
 		CA6C7447083B9CE10006D65C /* SDConstants.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SDConstants.h; sourceTree = "<group>"; };
@@ -645,7 +645,7 @@
 			isa = PBXGroup;
 			children = (
 				CA6C7372083B96D50006D65C /* Synergyd.app */,
-				CA6C73EE083B9AE60006D65C /* SynergyKM.prefPane */,
+				CA6C73EE083B9AE60006D65C /* SynergyKM.prefpane */,
 				CA5B4F0B083DF8D00071F3C7 /* SynergyKM.menu */,
 				CA05913E089C2E6B00A3901F /* quitsynergyd */,
 				CA059237089C32C900A3901F /* SynergyKM Installer.app */,
@@ -783,7 +783,7 @@
 			);
 			name = Prefpane;
 			productName = Prefpane;
-			productReference = CA6C73EE083B9AE60006D65C /* SynergyKM.prefPane */;
+			productReference = CA6C73EE083B9AE60006D65C /* SynergyKM.prefpane */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
